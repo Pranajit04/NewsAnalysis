@@ -42,8 +42,3 @@ npm run dev
 3) AI search calls `/api/googleNews?query=...` for Google News results.  
 4) Negative items can trigger backend email alerts.
 
-## Screenshots
-![Frontend](Frontend_A.png)
-![Frontend](Frontend_B.png)
-![Frontend](Frontend_C.png)
-
