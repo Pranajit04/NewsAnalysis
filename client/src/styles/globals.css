@@ -1,0 +1,137 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --retro-ink: #f6e9d7;
+  --retro-night: #0f141f;
+  --retro-accent: #ffb86c;
+  --retro-pink: #ff6f91;
+  --retro-cyan: #37f0e8;
+  --retro-muted: #8aa2c2;
+}
+
+* > * {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.libre {
+  font-family: "Libre Baskerville", serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--retro-ink);
+  background-color: var(--retro-night);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(55, 240, 232, 0.18) 0, transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(255, 111, 145, 0.15) 0, transparent 22%),
+    linear-gradient(180deg, rgba(15, 20, 31, 0.9), rgba(15, 20, 31, 0.95)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 184, 108, 0.08) 0,
+      rgba(255, 184, 108, 0.08) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+}
+
+h1,
+h2,
+h3,
+.retro-heading {
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: 1px;
+}
+
+.input-text {
+  @apply mt-1 block w-60 px-3 py-2 text-sm shadow-sm placeholder-slate-400;
+  background: rgba(15, 20, 31, 0.8);
+  color: var(--retro-ink);
+  border: 2px solid var(--retro-accent);
+  border-radius: 10px;
+}
+
+.retro-grid {
+  background-size: 48px 48px;
+  background-image: linear-gradient(
+      rgba(255, 184, 108, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(55, 240, 232, 0.08) 1px,
+      transparent 1px
+    );
+}
+
+.retro-chip {
+  background: linear-gradient(135deg, rgba(55, 240, 232, 0.12), rgba(255, 111, 145, 0.12));
+  border: 2px solid var(--retro-accent);
+  color: var(--retro-ink);
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 0 #070a12;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.retro-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #070a12, 0 0 18px rgba(55, 240, 232, 0.4);
+}
+
+.retro-panel {
+  background: linear-gradient(145deg, #1b2234, #0f141f);
+  border: 3px solid var(--retro-accent);
+  box-shadow: 0 10px 0 #0b0f1a, 0 0 24px rgba(55, 240, 232, 0.18);
+  border-radius: 16px;
+}
+
+.retro-link {
+  color: var(--retro-cyan);
+  text-decoration: none;
+}
+
+.retro-link:hover {
+  color: var(--retro-pink);
+  text-decoration: underline;
+}
