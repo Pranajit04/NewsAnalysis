@@ -1,5 +1,3 @@
-# NewsAnalysis
-
 # News Analysis Platform
 
 Hack Zenith — Team FnaTicOG  
